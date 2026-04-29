@@ -8,7 +8,7 @@
     "priority": "high",
     "summary": "One new document was identified on 31 March 2026, referencing document number 22802934872. The newly detected filing is an (E)FNAR1 – Annual Return, priced at HK$16",
     "form_filed": "FNAR1",
-    "filing_date": "15 April 2026",
+    "filing_date": "06 March 2026",
     "detected": "29 April 2026",
     "data_freshness": "Real-time ✓",
     "form_description": "Annual Return (FNAR1) is filed to report company particulars, share capital, directors, secretary, registered address and members as at the return date. Required annually for compliance.",
@@ -70,6 +70,7 @@
     "detailed_analysis": "Comparison between the previous 2025 annual return and the newly filed 2026 return confirms the addition of a new document: (E)FNAR1 – Annual Return (2026) with reference 22802934872. No structural or governance changes were observed.",
     "overall_assessment": "This filing represents a routine statutory annual return update with no material corporate, ownership, governance, or capital structure changes compared to the immediately preceding version. The document confirms continuity in management, shareholding, capital structure, and registered particulars.",
     "previous_filings": [
+      "05-Mar-2025 (E)FNAR1 - Annual Return",
       "08-Mar-2024 (E)FNAR1 - Annual Return",
       "27-Dec-2023 Information Sheet regarding Using Business Registration Number as Unique Identifier",
       "24-Feb-2023 (E)FNAR1 - Annual Return",
