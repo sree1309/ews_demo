@@ -72,18 +72,10 @@ def _esc(s: str) -> str:
 
 
 def _format_detected_display(monitoring: dict) -> str:
-    """Format 'Detected' as date only (e.g. 'March 3, 2026') from capture_info or monitoring.detected."""
-    cap = monitoring.get("capture_info") or {}
-    cur = cap.get("current_capture") or {}
-    date_str = (cur.get("date") or "").strip()
-    if date_str:
-        try:
-            from datetime import datetime
-            dt = datetime.strptime(date_str, "%d %B %Y")
-            return f"{dt.strftime('%B')} {dt.day}, {dt.year}"
-        except Exception:
-            return date_str
-    return (monitoring.get("detected") or "—").strip()
+    from datetime import datetime, timedelta, timezone
+    ist = timezone(timedelta(hours=5, minutes=30))
+    now_ist = datetime.now(ist)
+    return f"{now_ist.strftime('%B')} {now_ist.day}, {now_ist.year}"
 
 
 def _format_timeline_date_only(tdate: str) -> str:
