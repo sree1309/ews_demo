@@ -298,6 +298,16 @@ def main() -> None:
         return
 
     monitoring = data.get("monitoring") or {}
+
+    def _current_ist_date_display() -> str:
+        from datetime import datetime, timedelta, timezone
+        ist = timezone(timedelta(hours=5, minutes=30))
+        now_ist = datetime.now(ist)
+        return f"{now_ist.strftime('%B')} {now_ist.day}, {now_ist.year}"
+        
+    monitoring["detected"] = _current_ist_date_display()
+  
+    data["monitoring"] = monitoring
     doc_section = data.get("document") or {}
     timeline_strs = monitoring.get("timeline_strs") or data.get("timeline_strs") or DEFAULT_TIMELINE
 
